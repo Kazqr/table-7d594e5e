@@ -1,6 +1,6 @@
 /* RPG Table service worker — caches ONLY the app's own files so it opens offline.
    It never intercepts model/API requests (cross-origin or non-GET) and never stores chats: those live in IndexedDB. */
-const CACHE = 'rpg-table-c101e5c0d3ca';
+const CACHE = 'rpg-table-382596e507c3';
 const SHELL = ['./', './index.html', './manifest.webmanifest', './icons/icon-192.png', './icons/icon-512.png', './icons/icon-maskable-512.png'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)).then(() => self.skipWaiting()));
